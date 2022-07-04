@@ -4,7 +4,7 @@ import classes from './Profile.module.css'
 import avatar from './avatar.png'
 import Header from "../../../component/Headers/Headers";
 
-class Profile extends Component{
+class profileMngr extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -85,4 +85,4 @@ class Profile extends Component{
     }
 }
 
-export default Profile
+export default profileMngr

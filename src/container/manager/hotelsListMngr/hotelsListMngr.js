@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import axios from '../../../axios/axios'
 import classes from './hotelsListMngr.module.css'
+import Header from '../../../component/Headers/Headers'
 
 class hotelsListMngr extends Component{
     constructor(props){
@@ -53,6 +54,7 @@ class hotelsListMngr extends Component{
 
         return(
             <div className={classes.container}>
+                <Header/>
                 <h1>Ваш отель:</h1>
                 {this.state.hotels.length === 0 ?
                 <React.Fragment>

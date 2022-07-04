@@ -2,7 +2,6 @@ import './App.css';
 import { Component } from 'react';
 import {Switch, Route,} from 'react-router-dom'
 import Layout from './hoc/layout/layout'
-import Header from './component/Headers/Headers';
 
 
 import hotelsList from './container/user/hotelsList/hotelsList'
@@ -21,6 +20,7 @@ import hotelsListMngr from './container/manager/hotelsListMngr/hotelsListMngr';
 import addHotel from './container/manager/addHotel/addHotel';
 import chatMngr from './container/manager/chatMngr/chatMngr';
 import chatRoomMngr from './container/manager/chatRoomMngr/chatRoomMngr';
+import profileMngr from './container/manager/profileMngr/Profile';
 
 
 class App extends Component{
@@ -49,6 +49,7 @@ class App extends Component{
         case 'manager':
           return (
             <Switch>
+              <Route path='/profileMngr' exact component={profileMngr}/>
               <Route path='/chatRoomMngr' exact component={chatRoomMngr}/>
               <Route path='/chatMngr' exact component={chatMngr}/>
               <Route path='/addHotel' exact component={addHotel}/>
@@ -87,7 +88,6 @@ class App extends Component{
     return (
       <Layout>
         {router(localStorage.getItem('role'))}
-        <Header/>
       </Layout>
     );
   }

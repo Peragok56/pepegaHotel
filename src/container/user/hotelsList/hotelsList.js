@@ -4,6 +4,7 @@ import classes from './hotelsList.module.css'
 import exm from './exm.png'
 import { nanoid } from 'nanoid'
 import { Link } from 'react-router-dom'
+import Header from '../../../component/Headers/Headers'
 
 class hotelsList extends Component{
     constructor(props){
@@ -25,6 +26,7 @@ class hotelsList extends Component{
     render(){
         return(
             <div className={classes.container}>
+                <Header/>
                 <h1>Отели:</h1>
                 {this.state.hotels.length === 0 ?
                 <h1>Отелей пока нету</h1>

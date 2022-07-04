@@ -10,8 +10,6 @@
   }
   
   .info{
-    animation-name: slideInfo;
-    animation-duration: 1.8s;
     width: 100%;
     text-align: center;
     width: max-content;
@@ -43,24 +41,16 @@
     opacity: 0.8;
   }
 
-  @keyframes slideInfo {
-    0%{
-      transform: translateY(-210%);
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   @media(max-width: 720px){
     .info{
       padding: 15px;
     }
 
     .info > h1{
-      font-size: 55px;
+      font-size: 42px;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 15px;
     }
 
     .info > h2 {

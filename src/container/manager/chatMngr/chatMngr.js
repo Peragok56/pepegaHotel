@@ -3,6 +3,7 @@ import classes from './chatMngr.module.css'
 import axios from "../../../axios/axios";
 import { Link } from "react-router-dom";
 import {nanoid} from 'nanoid'
+import Header from "../../../component/Headers/Headers";
 
 class chatMngr extends Component{
     constructor(props){
@@ -33,6 +34,7 @@ class chatMngr extends Component{
     render(){
         return(
             <div className={classes.container}>
+                <Header/>
                 <h1>Чаты:</h1>
                 {this.state.msg.length === 0 ?
                 <h1>Чатов пока нету</h1> :

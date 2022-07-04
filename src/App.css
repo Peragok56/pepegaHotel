@@ -12,6 +12,8 @@
   justify-content: center;
   width: 100%;
   bottom: 0px;
+  right: 0;
+  left: 0;
 }
 
 .Header > h1{
@@ -80,7 +82,7 @@ svg{
   border-radius: 100px;
 }
 
-@media (max-width: 720px){
+@media (max-width: 1820px){
   .Header > nav{
     width: 80%;
     padding: 7px;

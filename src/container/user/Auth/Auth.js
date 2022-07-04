@@ -10,16 +10,16 @@ class Auth extends Component{
             <div className={classes.Auth}>
                 <div className={classes.authForm}>
                     <h1>Авторизация</h1>
-                    <form>
-                        <span>Логин</span>
-                        <input placeholder="Логин" type='text' id="login"/>
-                        <span>Пороль</span>
-                        <input placeholder="Пороль" type='password' id="password"/>
-                        <button onClick={(e) => 
+                    <form onSubmit={(e) => 
                         auth(e,
                             document.getElementById('login').value,
                             document.getElementById('password').value    
-                        )}>Войти</button>
+                        )}>
+                        <span>Логин</span>
+                        <input placeholder="Логин" type='text' id="login" required/>
+                        <span>Пороль</span>
+                        <input placeholder="Пороль" type='password' id="password" required/>
+                        <input type='submit' value='Войти'/>
                     </form>
                     <span><p>Нет аккаунта? </p> <Link to={{pathname: '/regist'}}> Зарегистрироваться</Link></span>
                 </div>

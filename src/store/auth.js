@@ -1,10 +1,11 @@
 import axios from "../axios/axios";
+import Swal from "sweetalert2";
 
 export function auth(e, login, password) {
     e.preventDefault()
      axios.post('/account/login', {login: login, password: password})
      .then((res) => {
-         console.log(res);
+         console.log(res.status);
          localStorage.setItem('token', res.data.token);
          localStorage.setItem('exp', res.data.expiresIn);
          console.log(res.data.token);
@@ -25,6 +26,20 @@ export function auth(e, login, password) {
          })
      })
      .catch((err) => {
+        if (err.response.status === 403) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Упсс',
+                text: 'Неверный пароль',
+              })
+        }
+        if (err.response.status === 422) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Упсс',
+                text: 'Неверный пароль',
+              })
+        }
          console.log(err);
      })
 }

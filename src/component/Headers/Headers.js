@@ -31,12 +31,12 @@ class Header extends Component{
                         >
                             <Heart />
                         </NavLink>
-                        <NavLink
+                        {/* <NavLink
                             exact to="/"
                             activeClassName="selected"
                         >
                             <Bag/>
-                        </NavLink>
+                        </NavLink> */}
                         <NavLink
                             exact to="/profile"
                             activeClassName="selected"
@@ -57,20 +57,20 @@ class Header extends Component{
                         >
                             <Messages/>
                         </NavLink>
-                        <NavLink
+                        {/* <NavLink
                             exact to="/"
                             activeClassName="selected"
                         >
                             <Heart />
-                        </NavLink>
-                        <NavLink
+                        </NavLink> */}
+                        {/* <NavLink
                             exact to="/"
                             activeClassName="selected"
                         >
                             <Bag/>
-                        </NavLink>
+                        </NavLink> */}
                         <NavLink
-                            exact to="/profile"
+                            exact to="/profileMngr"
                             activeClassName="selected"
                         >
                             <img src={avatar}/>

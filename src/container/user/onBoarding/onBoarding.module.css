@@ -1,20 +1,27 @@
 .container{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     z-index: 1000;
     position: sticky;
     background-color: white;
 }
 
 .info{
-    height: 355px;
     padding: 15px 50px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
+.container > img{
+    width: 100%;
+    height: 465px;
+    object-fit: cover;
+}
+
 .info > h1{
+    text-align: center;
+    width: 100%;
     color: #3845AB;
     font-weight: 700;
     font-size: 28px;
@@ -31,6 +38,8 @@
 }
 
 .info > p{
+    text-align: center;
+    width: 100%;
     color: #1F1F39;
     font-weight: 400;
     font-size: 14px;
@@ -39,6 +48,7 @@
 }
 
 .buttonList{
+    gap: 15px;
     width: 100%;
     display: flex;
     justify-content: space-between;

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from "../../../axios/axios";
 import classes from './messages.module.css'
+import Header from "../../../component/Headers/Headers";
 
 class Messages extends Component{
     constructor(props){
@@ -22,6 +23,7 @@ class Messages extends Component{
     render(){
         return(
             <div className={classes.container}>
+                <Header/>
                 <h1>Чаты:</h1>
                 {this.state.msg.length === 0 ?
                 <h1>Чатов пока нету</h1> :

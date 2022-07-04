@@ -16,7 +16,7 @@ class Home extends Component{
         return(
             <div className={classes.main}>
                 <div className={classes.info}>
-                    <img src={home}/>
+                    <h1>Добро пожаловать</h1>
                     {localStorage.getItem('token') === null ? 
                         <Link
                             to={{

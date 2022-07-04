@@ -38,20 +38,21 @@ class Regist extends Component{
             <div className={classes.Auth}>
                 <div className={classes.authForm}>
                     <h1>Регистрация</h1>
-                    <form>
+                    <form onSubmit={registration}>
                         <span>Имя</span>
-                        <input placeholder="Имя" type='text' id="name"/>
+                        <input placeholder="Имя" type='text' id="name" required/>
                         <span>Фамилия</span>
-                        <input placeholder="Фамилия" type='text' id="surname"/>
+                        <input placeholder="Фамилия" type='text' id="surname" required/>
                         <span>Логин</span>
-                        <input placeholder="Логин" type='text' id="login"/>
+                        <input placeholder="Логин" type='phone' id="login" required/>
                         <span>Почта</span>
-                        <input placeholder="Email" type='email' id="email"/>
+                        <input placeholder="Email" type='email' id="email" required/>
                         <span>Телефон</span>
-                        <input placeholder="Телефон" type='text' id="phone"/>
-                        <span>Пороль</span>
-                        <input placeholder="Пороль" type='password' id="password"/>
-                        <button onClick={registration}>Регистрация</button>
+                        <input placeholder="Телефон" type='text' id="phone" required/>
+                        <span>Пароль</span>
+                        <input placeholder="Пароль" type='password' id="password" required/>
+                        {/* <button onClick={registration}>Регистрация</button> */}
+                        <input type='submit' value='Регистрация'/>
                     </form>
                     <span><p>Есть аккаунта? </p> <Link to={{pathname: '/auth'}}> Войти</Link></span>
                     <Link to='/registMngr'>Зарегестрироваться как менеджер</Link>
