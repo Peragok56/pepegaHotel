@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 105px;
+    background-color: #1F1F39;
+    color: white;
+}
+
+.card{
+    color: white;
+}

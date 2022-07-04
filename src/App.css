@@ -1,0 +1,107 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Header{
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0px;
+}
+
+.Header > h1{
+  font-size: 36px;
+  font-weight: 600;
+  width: 100%;
+  height: max-content;
+  color: #336BD8;
+  margin-bottom: 28px;
+}
+
+.Header > h1 > span{
+  font-weight: 400;
+  z-index: 1;
+}
+
+.Header > nav{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+  border: 2px solid #383E5E;
+  background: #383E5E;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.Header > nav > a, .Header > nav > button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 28px;
+  font-size: 24px;
+  color: #8B8B8B;
+  text-decoration: none;
+  object-fit: cover;
+}
+
+svg{
+  fill: #8B8B8B;
+}
+
+.Header > nav > a > img{
+  width: 15px;
+  border: solid 2px #8B8B8B;
+  border-radius: 100px;
+  padding: 0px !important;
+}
+
+.selected{
+  background-color: #78829D !important;
+  padding: 10px !important;
+  border-radius: 100px;
+}
+
+.selected svg,
+.selected svg path{
+  fill: #FFFFFF;
+}
+
+.selected img{
+  border-radius: 100px;
+}
+
+@media (max-width: 720px){
+  .Header > nav{
+    width: 80%;
+    padding: 7px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .Header > nav > a, button{
+    padding: 8px 16px;
+  }
+
+  .Header > nav{
+    justify-content: space-around;
+  }
+
+  .Header svg, .Header img{
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .Header > nav > .search.active{
+    width: 100%;
+  }
+}

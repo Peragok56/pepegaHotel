@@ -1,0 +1,104 @@
+.Auth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F1F39;
+    z-index: 1000;
+    position: sticky;
+}
+
+.authForm{
+    border-radius: 8px;
+    padding: 23px 43px;
+    width: 400px;
+    background-color: #1F1F39;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation-name: authSlide;
+    animation-duration: 2.1s;
+}
+
+.authForm > h1{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: #EEA86C;
+    margin-bottom: 28px;
+}
+
+.authForm > form{
+    width: 100%;
+}
+
+.authForm > form > input {
+    font-size: 16px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.authForm > form > input::placeholder{
+    color: #909090;
+}
+
+.authForm > form > button{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #383838;
+    color: #FFFFFF;
+    padding: 8px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: ease-in-out 0.3s;
+    margin-bottom: 15px;
+}
+
+.authForm > form > button:hover{
+    opacity: 0.8;
+}
+
+.authForm > span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #909090;
+}
+
+.authForm > span > a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #EEA86C;
+    font-weight: 500;
+}
+
+@keyframes authSlide {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 720px){
+    .Auth{
+        background-color: #1F1F39;
+    }
+}

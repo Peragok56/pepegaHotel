@@ -1,0 +1,77 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 105px;
+    background-color: #1F1F39;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container > h1{
+    height: max-content;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    width: 80%;
+    background-color: #383E5E;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.info img{
+    width: 75px;
+    height: 78px;
+}
+
+.info > h1{
+    width: 100%;
+    height: max-content;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.info > input{
+    width: 100%;
+    height: max-content;
+    padding: 8px 6px;
+    border: 1px solid #FFFFFF;
+    background: none;
+    outline: none;
+    color: white;
+    border-radius: 15px;
+}
+
+.info button{
+    padding: 8px 16px;
+    border: none;
+    background-color: #EEA86C;
+    border-radius: 15px;
+    color: white;
+    margin-top: 45px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.Exit{
+    background-color: rgba(189, 17, 17, 0.788);
+    color: white;
+    border: none;
+    width: 80%;
+    height: max-content;
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
