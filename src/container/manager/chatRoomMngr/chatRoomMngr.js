@@ -34,12 +34,14 @@ class chatRoomMngr extends Component{
             .then((res) => {
                 console.log(res)
                     document.getElementById('text').value = ''
-                    axios.get(`/message/getHistory?chatId=${this.state.chatId}`, {headers: {Authorization: localStorage.getItem('token')}})
-                    .then((res) => {
-                        console.log(res);
-                        this.setState({msg: res.data.messages})
-                    })
-                    .catch(err => console.log(err))
+                    setInterval(() => {
+                        axios.get(`/message/getHistory?chatId=${this.state.chatId}`, {headers: {Authorization: localStorage.getItem('token')}})
+                        .then((res) => {
+                            console.log(res);
+                            this.setState({msg: res.data.messages})
+                        })
+                        .catch(err => console.log(err))
+                    }, 1000);
             })
             .catch(err => console.log(err))
         }
