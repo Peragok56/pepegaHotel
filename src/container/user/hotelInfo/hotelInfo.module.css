@@ -12,18 +12,6 @@ a{
     text-decoration: none;
 }
 
-.card > a{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: #EEA86C;
-    width: 100%;
-    padding: 8px 16px;
-    margin: 15px 0px;
-    border-radius: 15px;
-}
-
 .card{
     overflow: hidden;
     padding-top: 35px;
@@ -38,6 +26,15 @@ a{
     font-size: 12px;
     margin-bottom: 15px;
     word-wrap: break-word;
+    position: relative;
+}
+
+.card > a{
+    position: absolute;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    z-index: 1000;
 }
 
 .card > h2{

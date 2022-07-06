@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "../../../axios/axios";
 import classes from './hotelInfo.module.css'
 
+import back from './ep_back.png'
 import Locate from './Locate.svg'
 
 class hotelInfo extends Component{
@@ -37,6 +38,9 @@ class hotelInfo extends Component{
                 <h1 style={{color: 'black'}}>Загрузка</h1> : 
                 <React.Fragment>
                     <div className={classes.card}>
+                    <Link to={{pathname: '/hotelsList'}}>
+                        <img src={back} className={classes.back}/>
+                    </Link>
                     <img src={`http://85.193.80.64:8181/` + this.state.photos[0].path}/>
                     <h2><span><img src={Locate}/></span>{this.state.info.address}</h2>
                 </div>
