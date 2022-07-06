@@ -1,0 +1,101 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    height: max-content;
+    background-color: white;
+    color: white;
+}
+
+.perInfo{
+    background-color: #1F1F39;
+    color: white;
+    height: max-content;
+    width: 100%;
+    padding: 35px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 35px;
+    position: relative;
+}
+
+.perInfo > a{
+    position: absolute;
+    left: 15px;
+}
+
+.perInfo > h1{
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.perList{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.perList > button{
+    border: none;
+    background-color: #E7F1FF;
+    color: #3845AB;
+    padding: 16px 32px;
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.perList > img{
+    max-width: 120px;
+}
+
+.rightPer{
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.perSettings{
+    padding: 25px 35px;
+    height: 100%;
+}
+
+.changeInfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.changeInfo > span{
+    font-weight: 700;
+    font-size: 12px;
+    color: #38385E;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.changeInfo > input{
+    background: #F9F9FB;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1F1F39;
+    border: none;
+    padding: 13px 20px;
+    width: 100%;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.perSettings > button{
+    width: 100%;
+    background: #3845AB;
+    border-radius: 14px;
+    border: none;
+    color: white;
+    padding: 13px;
+}

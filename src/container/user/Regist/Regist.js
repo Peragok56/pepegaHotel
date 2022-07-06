@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import axios from '../../../axios/axios'
 import Swal from "sweetalert2";
 
+import confirm from './confirm.png'
+
 
 class Regist extends Component{
     render(){
@@ -37,7 +39,10 @@ class Regist extends Component{
         return(
             <div className={classes.Auth}>
                 <div className={classes.authForm}>
-                    <h1>Регистрация</h1>
+                    <div className={classes.assist}>
+                        <img src={confirm}/>
+                        <h1>Регистрация</h1>
+                    </div>
                     <form onSubmit={registration}>
                         <span>Имя</span>
                         <input placeholder="Имя" type='text' id="name" required/>
@@ -53,9 +58,9 @@ class Regist extends Component{
                         <input placeholder="Пароль" type='password' id="password" required/>
                         {/* <button onClick={registration}>Регистрация</button> */}
                         <input type='submit' value='Регистрация'/>
-                    </form>
-                    <span><p>Есть аккаунта? </p> <Link to={{pathname: '/auth'}}> Войти</Link></span>
+                        <span><p>Есть аккаунта? </p> <Link to={{pathname: '/auth'}}> Войти</Link></span>
                     <Link to='/registMngr'>Зарегестрироваться как менеджер</Link>
+                    </form>
                 </div>
             </div>
         )

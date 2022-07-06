@@ -35,7 +35,9 @@ class chatMngr extends Component{
         return(
             <div className={classes.container}>
                 <Header/>
-                <h1>Чаты:</h1>
+                <div className={classes.upInfo}>
+                    <h1>Чаты:</h1>
+                </div>
                 {this.state.msg.length === 0 ?
                 <h1>Чатов пока нету</h1> :
                 <div className={classes.msgList}>

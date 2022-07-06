@@ -1,5 +1,13 @@
 import React, {Component} from "react";
 import classes from './onBoarding.module.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper";
+
+import classStyle from './styles.module.css'
 
 import first from './first.png'
 import second from './second.png'
@@ -64,7 +72,41 @@ class onBoarding extends Component{
 
         return(
             <div className={classes.container}>
-                {showBlock(this.state.list)}
+                <Swiper pagination={true} modules={[Pagination]} className={classes.swiper}>
+                    <SwiperSlide>
+                        <React.Fragment>
+                            <img src={first}/>
+                            <div className={classes.info}>
+                                <h1>Choose from a thousand of places</h1>
+                                <p>We provide you with a variant of accomodation for a better choice</p>
+                            </div>
+                        </React.Fragment>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <React.Fragment>
+                        <img src={second}/>
+                        <div className={classes.info}>
+                            <h1>Choose from a thousand of places</h1>
+                            <p>We provide you with a variant of accomodation for a better choice</p>
+                            <div className={classes.buttonList}>
+                            </div>
+                        </div>
+                    </React.Fragment>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <React.Fragment>
+                        <img src={three}/>
+                        <div className={classes.info}>
+                            <h1>Cool and secure service</h1>
+                            <p>We provide you with a variant of accomodation for a better choice</p>
+                            <div className={classes.buttonList}>
+                                <Link className={classes.Next} to='/regist'>Sign up</Link>
+                                <Link className={classes.Back} to='/auth'>Sign in</Link>
+                            </div>
+                        </div>
+                    </React.Fragment>    
+                    </SwiperSlide>
+                </Swiper>
             </div>  
         )
     }

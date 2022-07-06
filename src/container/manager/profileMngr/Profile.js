@@ -1,8 +1,11 @@
 import React, {Component} from "react";
 import axios from "../../../axios/axios";
-import classes from './Profile.module.css'
-import avatar from './avatar.png'
+import classes from './Profile.module.css' 
 import Header from "../../../component/Headers/Headers";
+
+import avatar from './avatar.png'
+import signOut from './signOut.png'
+import { Link } from "react-router-dom";
 
 class profileMngr extends Component{
     constructor(props){
@@ -35,51 +38,25 @@ class profileMngr extends Component{
             window.location.pathname = '/'
         }
 
-        let change = () => {
-            let name = this.state.name
-            let surname = this.state.surname
-
-            axios.patch('/account/edit', {firstName: name, lastName: surname}, {headers: {Authorization: localStorage.getItem('token')}})
-            .then((res) => {
-                console.log(res);
-                axios.get('/account/getInfo', {headers: {Authorization: localStorage.getItem('token')}})
-                .then((res2) => {
-                    console.log(res2);
-                    this.setState({info: res2.data.account})
-                    this.setState({surname: res2.data.account.lastName})
-                    this.setState({name: res2.data.account.firstName})
-                })
-                .catch((err3) => {
-                    console.log(err3);
-                })
-                console.log(this.state.surname);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-        }
-
         return(
             <div className={classes.container}>
                 <Header/>
-                <h1>Профиль</h1>
-                <div className={classes.info}>
-                    <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                <div className={classes.perInfo}>
+                    <h1>Профиль</h1>
+                    <div className={classes.perList}>
                         <img src={avatar}/>
+                        <div className={classes.rightPer}>
+                            <h1>{this.state.name}</h1>
+                            <h1>{this.state.surname}</h1>
+                        </div>
                     </div>
-                    <h1>Имя:</h1>
-                    <input value={this.state.name} onChange={(e) => this.setState({name: e.target.value})}/>
-                    <h1>Фамилия:</h1>
-                    <input value={this.state.surname} onChange={(e) => this.setState({surname: e.target.value})}/>
-                    <h1>Почта:</h1>
-                    <h1>{this.state.info.email}</h1>
-                    <h1>Телефон:</h1>
-                    <h1>+{this.state.info.phone}</h1>
-                    <h1>Логин:</h1>
-                    <h1>{this.state.info.login}</h1>
-                    <button onClick={change}>Изменить</button>
                 </div>
-                <button className={classes.Exit} onClick={exit}>Выйти</button>
+                <div className={classes.perSettings}>
+                    <div className={classes.exit} onClick={exit}>
+                        <img src={signOut}/>
+                        <p>Выйти</p>
+                    </div>
+                </div>
             </div>
         )
     }

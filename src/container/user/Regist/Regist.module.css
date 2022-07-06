@@ -4,14 +4,31 @@
     height: max-content;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 55px 15px;
     background-color: #1F1F39;
     z-index: 1000;
     position: sticky;
-    padding: 0px 15px;
 }
 
-.authForm{
+.assist{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.assist > h1{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+.authForm > form{
     border-radius: 8px;
     padding: 23px 43px;
     width: 400px;
@@ -24,9 +41,14 @@
 
 .authForm > form > span{
     color: #38385E;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .authForm > h1{
@@ -42,15 +64,12 @@
     width: 100%;
 }
 
-.authForm > a{
-    width: 100%;
+.authForm > form > span >a{
     text-decoration: none;
-    color: white;
+    color: #3845AB;
     text-align: center;
-    background-color: #3845AB;
     border-radius: 15px;
-    margin-top: 15px;
-    padding: 8px 16px;
+    font-weight: 700;
 }
 
 .authForm > form > input {
@@ -98,11 +117,18 @@
     color: #909090;
 }
 
-.authForm > span > a{
+.authForm > form > a{
     font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
-    color: #3845AB;
+    color: white;
+    background-color: #3845AB;
+    padding: 8px 16px;
+    font-size: 14px;
     font-weight: 500;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
 }
 
 @media(max-width: 720px){

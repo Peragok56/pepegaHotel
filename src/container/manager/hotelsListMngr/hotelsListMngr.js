@@ -55,12 +55,15 @@ class hotelsListMngr extends Component{
         return(
             <div className={classes.container}>
                 <Header/>
-                <h1>Ваш отель:</h1>
+                <div className={classes.upInfo}>
+                    <h1>Ваш отель:</h1>
+                </div>
+                
                 {this.state.hotels.length === 0 ?
-                <React.Fragment>
+                <div className={classes.notHotelSelf}>
                     <h1>У вас пока нет отеля, но вы можете его добавить</h1>
                     <Link to='/addHotel'>Добавить отель</Link>
-                </React.Fragment>
+                </div>
                 : 
                 <React.Fragment>
                     <div className={classes.card}>
@@ -71,8 +74,8 @@ class hotelsListMngr extends Component{
                         <textarea value={this.state.description} onChange={(e) => this.setState({description: e.target.value})}/>
                         <h2>Адрес:</h2>
                         <input value={this.state.address} onChange={(e) => this.setState({address: e.target.value})}/>
+                        <button className={classes.button} onClick={edit}>Сохранить</button>
                     </div>
-                    <button className={classes.button} onClick={edit}>Сохранить</button>
                 </React.Fragment>
                 }
             </div>

@@ -1,19 +1,43 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    padding-top: 35px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 105px;
+}
+
+.upInfo{
+    width: 100%;
+    text-align: center;
+    padding: 45px;
     background-color: #1F1F39;
+    border-bottom-left-radius: 35px;
     color: white;
+}
+
+.notHotelSelf{
+    padding: 35px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.notHotelSelf > a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #1F1F39;
+    width: 100%;
+    padding: 8px 16px;
+    margin: 15px 0px;
+    border-radius: 15px;
 }
 
 .card > a{
     display: block;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: #1F1F39;
     background-color: #EEA86C;
     width: 100%;
     padding: 8px 16px;
@@ -24,12 +48,12 @@
 .card{
     width: 100%;
     min-height: 275px;
-    background-color: #383E5E;
+    margin-top: 25px;
     border-radius: 15px;
-    padding: 8px;
-    color: white;
+    padding: 25px;
     font-size: 12px;
     margin-bottom: 15px;
+    color: #1F1F39;
 }
 
 .card > h2{
@@ -44,7 +68,7 @@
     font-size: 20px;
     font-weight: 700;
     border: none;
-    color: #ffffff;
+    color: #1F1F39;
 }
 
 .card > textarea{
@@ -55,8 +79,8 @@
     font-size: 20px;
     font-weight: 700;
     border: none;
-    color: #ffffff;
-    min-height: 75px;
+    color: #1F1F39;
+    min-height: 125px;
 }
 
 .card > img{
@@ -70,5 +94,6 @@
     border: none;
     color: white;
     border-radius: 15px;
-    background-color: #EEA86C;
+    background-color: #1F1F39;
+    width: 100%;
 }

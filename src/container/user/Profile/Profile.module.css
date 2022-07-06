@@ -2,77 +2,74 @@
     width: 100%;
     min-height: 100vh;
     height: max-content;
-    padding-top: 35px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 105px;
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perInfo{
     background-color: #1F1F39;
     color: white;
+    height: max-content;
+    width: 100%;
+    padding: 35px 15px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 35px;
 }
 
-.container > h1{
-    height: max-content;
+.perInfo > h1{
+    width: 100%;
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.info{
+.perList{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    min-height: 100%;
-    width: 80%;
-    background-color: #383E5E;
-    padding: 15px;
-    border-radius: 15px;
+    justify-content: space-between;
 }
 
-.info img{
-    width: 75px;
-    height: 78px;
+.perList > img{
+    max-width: 120px;
+    border: solid 1px white;
+    padding: 10px;
+    border-radius: 100px;
 }
 
-.info > h1{
-    width: 100%;
-    height: max-content;
-    background: none;
-    outline: none;
-    color: white;
-    font-size: 12px;
-    margin-bottom: 7px;
-    margin-top: 7px;
+.rightPer{
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-.info > input{
-    width: 100%;
-    height: max-content;
-    padding: 8px 6px;
-    border: 1px solid #FFFFFF;
-    background: none;
-    outline: none;
-    color: white;
-    border-radius: 15px;
+.perSettings{
+    padding: 25px 35px;
+    height: 100%;
 }
 
-.info button{
-    padding: 8px 16px;
-    border: none;
-    background-color: #EEA86C;
-    border-radius: 15px;
-    color: white;
-    margin-top: 45px;
-    width: 100%;
-    justify-content: flex-end;
+.card{
+    color: #1F1F39;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
 }
 
-.Exit{
-    background-color: rgba(189, 17, 17, 0.788);
-    color: white;
-    border: none;
-    width: 80%;
-    height: max-content;
-    margin-top: 15px;
-    border-radius: 15px;
-    padding: 8px 16px;
-    cursor: pointer;
+.exit{
+    color: #1F1F39;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 70px;
 }

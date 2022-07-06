@@ -13,9 +13,9 @@ class followHotels extends Component{
         return(
             <div className={classes.container}>
                 <Header/>
-                <h1>Избранные:</h1>
+                <h1>Избранные</h1>
                 {this.state.follow.length === 0 ?
-                    <h1>Вы пока не добавили отели</h1> :
+                    <span>Вы пока не добавили отели</span> :
                     this.state.follow.map((item) => {
                         console.log(item);
                     })

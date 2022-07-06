@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Monserat";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Monserat"),
+         url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  }

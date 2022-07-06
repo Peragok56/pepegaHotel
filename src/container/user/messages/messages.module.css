@@ -1,14 +1,74 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    padding-top: 35px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 105px;
-    background-color: #1F1F39;
-    color: white;
 }
 
 .card{
+    color: #1F1F39;
+    width: 100%;
+    background-color: #F9F9FB;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card > h1{
+    font-weight: 600;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.msgInfo{
+    background-color: #1F1F39;
     color: white;
+    font-weight: 600;
+    font-size: 10px;
+    padding: 45px;
+    border-bottom-left-radius: 35px;
+    text-align: center;
+}
+
+.msgList{
+    width: 100%;
+    padding: 25px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.msgList > a{
+    width: 100%;
+}
+
+.blockSwitchMsg{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    gap: 15px;
+}
+
+.blockSwitchMsg > button{
+    background: #F3F6FD;
+    border-radius: 15px;
+    border: none;
+    width: 49%;
+    padding: 8px 32px;
+}
+
+.msgList > input {
+    background: #F3F6FD;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px;
+    border: none;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.msgList > h1{
+    width: 100%;
+    text-align: center;
+    color: #1F1F39;
+    font-size: 18px;
+    margin-top: 25px;
 }

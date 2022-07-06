@@ -13,6 +13,7 @@ export function auth(e, login, password) {
          .then((res2) => {
              console.log(res2);
              console.log(res2.data);
+             localStorage.setItem('id', res2.data.account._id)
              localStorage.setItem('role', res2.data.account.role.name)
              localStorage.setItem('name', res2.data.account.login)
              if (res2.data.account.role.name === 'user') {

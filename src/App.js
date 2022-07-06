@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import {Switch, Route,} from 'react-router-dom'
 import Layout from './hoc/layout/layout'
+import './fonts.css'
 
 
 import hotelsList from './container/user/hotelsList/hotelsList'
@@ -15,6 +16,7 @@ import followHotels from './container/user/followHotels/followHotels';
 import hotelInfo from './container/user/hotelInfo/hotelInfo';
 import chatRoom from './container/user/chatRoom/chatRoom';
 import onBoarding from './container/user/onBoarding/onBoarding';
+import ProfileChange from './container/user/ProfileChange/ProfileChange';
 
 import hotelsListMngr from './container/manager/hotelsListMngr/hotelsListMngr';
 import addHotel from './container/manager/addHotel/addHotel';
@@ -60,6 +62,7 @@ class App extends Component{
         case 'user':
           return (
             <Switch>
+              <Route path='/profileChange' exact component={ProfileChange}/>
               <Route path='/chatRoom' exact component={chatRoom}/>
               <Route path='/hotelInfo' exact component={hotelInfo}/>
               <Route path='/followHotels' exact component={followHotels}/>
