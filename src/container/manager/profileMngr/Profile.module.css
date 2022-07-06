@@ -5,6 +5,8 @@
     padding-bottom: 105px;
     background-color: white;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .perInfo{

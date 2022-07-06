@@ -6,28 +6,33 @@
     align-items: center;
     background-color: #1F1F39;
     z-index: 1000;
-    position: sticky;
+    position: relative;
+    padding: 15px;
+}
+
+.Auth > a{
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
 
 .authForm{
     border-radius: 8px;
     padding: 23px 43px;
     width: 400px;
-    background-color: #1F1F39;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation-name: authSlide;
-    animation-duration: 2.1s;
 }
 
 .authForm > h1{
     width: 100%;
     font-size: 24px;
     font-weight: 600;
-    color: #EEA86C;
+    color: #1F1F39;
     margin-bottom: 28px;
 }
 
@@ -37,7 +42,8 @@
 
 .authForm > form > input {
     font-size: 16px;
-    background-color: #FFFFFF;
+    background: #F9F9FB;
+    border-radius: 15px;
     width: 100%;
     border: none;
     outline: none;
@@ -84,17 +90,6 @@
     text-decoration: none;
     color: #EEA86C;
     font-weight: 500;
-}
-
-@keyframes authSlide {
-    0%{
-        opacity: 0;
-        transform: scale(0);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 @media(max-width: 720px){

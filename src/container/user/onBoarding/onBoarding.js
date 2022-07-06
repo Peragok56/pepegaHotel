@@ -74,16 +74,16 @@ class onBoarding extends Component{
             <div className={classes.container}>
                 <Swiper pagination={true} modules={[Pagination]} className={classes.swiper}>
                     <SwiperSlide>
-                        <React.Fragment>
+                        <div className={classes.infoCardOnbording}>
                             <img src={first}/>
                             <div className={classes.info}>
                                 <h1>Choose from a thousand of places</h1>
                                 <p>We provide you with a variant of accomodation for a better choice</p>
                             </div>
-                        </React.Fragment>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <React.Fragment>
+                    <div className={classes.infoCardOnbording}>
                         <img src={second}/>
                         <div className={classes.info}>
                             <h1>Choose from a thousand of places</h1>
@@ -91,10 +91,10 @@ class onBoarding extends Component{
                             <div className={classes.buttonList}>
                             </div>
                         </div>
-                    </React.Fragment>
+                    </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <React.Fragment>
+                    <div className={classes.infoCardOnbording}>
                         <img src={three}/>
                         <div className={classes.info}>
                             <h1>Cool and secure service</h1>
@@ -104,7 +104,7 @@ class onBoarding extends Component{
                                 <Link className={classes.Back} to='/auth'>Sign in</Link>
                             </div>
                         </div>
-                    </React.Fragment>    
+                    </div>    
                     </SwiperSlide>
                 </Swiper>
             </div>  

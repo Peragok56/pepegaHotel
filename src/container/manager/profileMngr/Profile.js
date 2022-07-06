@@ -4,10 +4,14 @@ import classes from './Profile.module.css'
 import Header from "../../../component/Headers/Headers";
 
 import avatar from './avatar.png'
+import body from './body.png'
+import setting from './setting.png'
+import phone from './phone.png'
+import politic from './politic.png'
 import signOut from './signOut.png'
 import { Link } from "react-router-dom";
 
-class profileMngr extends Component{
+class Profile extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -52,6 +56,22 @@ class profileMngr extends Component{
                     </div>
                 </div>
                 <div className={classes.perSettings}>
+                        <div className={classes.card}>
+                            <img src={body}/>
+                            <p>Информация профиля</p>
+                        </div>
+                    <div className={classes.card}>
+                        <img src={setting}/>
+                        <p>Настройки</p>
+                    </div>
+                    <div className={classes.card}>
+                        <img src={phone}/>
+                        <p>Поддержка</p>
+                    </div>
+                    <div className={classes.card}>
+                        <img src={politic}/>
+                        <p>Политика конфиденциальности </p>
+                    </div>
                     <div className={classes.exit} onClick={exit}>
                         <img src={signOut}/>
                         <p>Выйти</p>
@@ -62,4 +82,4 @@ class profileMngr extends Component{
     }
 }
 
-export default profileMngr
+export default Profile

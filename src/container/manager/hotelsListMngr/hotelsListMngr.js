@@ -4,6 +4,8 @@ import axios from '../../../axios/axios'
 import classes from './hotelsListMngr.module.css'
 import Header from '../../../component/Headers/Headers'
 
+import Frame from './Frame.png'
+
 class hotelsListMngr extends Component{
     constructor(props){
         super(props)
@@ -61,6 +63,7 @@ class hotelsListMngr extends Component{
                 
                 {this.state.hotels.length === 0 ?
                 <div className={classes.notHotelSelf}>
+                    <img src={Frame}/>
                     <h1>У вас пока нет отеля, но вы можете его добавить</h1>
                     <Link to='/addHotel'>Добавить отель</Link>
                 </div>

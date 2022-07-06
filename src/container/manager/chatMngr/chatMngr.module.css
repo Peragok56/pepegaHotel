@@ -12,6 +12,15 @@
     color: white;
 }
 
+.NotChats{
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card{
     color: #1F1F39;
 }

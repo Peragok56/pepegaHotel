@@ -4,6 +4,7 @@ import axios from "../../../axios/axios";
 import { Link } from "react-router-dom";
 import {nanoid} from 'nanoid'
 import Header from "../../../component/Headers/Headers";
+import Frame from './Frame.png'
 
 class chatMngr extends Component{
     constructor(props){
@@ -39,7 +40,11 @@ class chatMngr extends Component{
                     <h1>Чаты:</h1>
                 </div>
                 {this.state.msg.length === 0 ?
-                <h1>Чатов пока нету</h1> :
+                <div className={classes.NotChats}>
+                    <img src={Frame}/>
+                    <h1>Чатов пока нету</h1> 
+                </div>
+                :
                 <div className={classes.msgList}>
                     {this.state.msg.map((item) => 
                         <Link 

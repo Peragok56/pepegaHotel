@@ -65,6 +65,11 @@
     object-fit: cover;
   }
   
+  .infoCardOnbording > img{
+    height: 40%;
+    object-fit: cover;
+    width: 100%;
+  }
 
 .buttonList{
     gap: 15px;

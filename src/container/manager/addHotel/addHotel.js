@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "../../../axios/axios";
 import classes from './addHotel.module.css'
+
+import back from './ep_back.png'
 
 
 class addHotel extends Component{
@@ -19,7 +22,10 @@ class addHotel extends Component{
             let description = document.getElementById('description').value
             let address = document.getElementById('address').value
             axios.post('/hotel/create', {title: title, description: description, address: address, photos: this.state.photos}, {headers: {Authorization: localStorage.getItem('token')}})
-            .then((res) => console.log(res))
+            .then((res) => {
+                console.log(res)
+                window.location.pathname = '/hotelsListMngr'
+            })
             .catch((err) => console.log(err))
         }
 
@@ -47,6 +53,9 @@ class addHotel extends Component{
 
         return(
             <div className={classes.Auth}>
+                <Link to={{pathname: '/hotelsListMngr'}}>
+                    <img src={back}/>
+                </Link>
                 <div className={classes.authForm}>
                     <h1>Добавления отеля</h1>
                     <form>
